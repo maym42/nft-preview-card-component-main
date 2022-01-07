@@ -1,0 +1,297 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+:root {
+  /*## Colors*/
+
+  /*### Primary*/
+  --Soft-blue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+
+  /*### Neutral*/
+  --Very-dark-blue-main-BG: hsl(217, 54%, 11%);
+  --Very-dark-blue-card-BG: hsl(216, 50%, 16%);
+  --Very-dark-blue-line: hsl(215, 32%, 27%);
+  --White: hsl(0, 0%, 100%);
+
+  /*big picture*/
+  --big-pic-mobile-size: 74vw;
+  --big-pic-radius: 8px;
+  --big-pic-desktop-size: 303px;
+
+  /*card size*/
+  --card-radius: 15px;
+  --card-mobile-margin: 6.4vw;
+  --card-mobile-padding: 6.4vw;
+  --card-desktop-size: 353px;
+
+  /*icons size*/
+  --icon-view-size: 48px;
+  --icon-clock-size: 17px;
+  --icon-mobile-margin: 1.3vw;
+
+  --contianerProfile-padding: 3.7vw;
+
+  /*avatar size*/
+  --avatar-mobile-margin: 3.7vw;
+  --avatar-pic-size: 33px;
+
+  --font-size-mobile: 4.3vw;
+}
+/*~~~~~HTML TAGS~~~~~~*/
+html {
+  font-size: var(--font-size-mobile);
+}
+
+body {
+  background-color: var(--Very-dark-blue-main-BG);
+  /*flex*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /*font*/
+  font-family: "Outfit", sans-serif;
+  font-weight: 300;
+  color: var(--Soft-blue);
+  /*space*/
+  margin: 0;
+  /*size*/
+  width: 100vw;
+  height: 100vh;
+}
+figure {
+  margin: 0;
+}
+/*~~~~~~~~~~~~~~*/
+.card {
+  background-color: var(--Very-dark-blue-card-BG);
+  border-radius: var(--card-radius);
+  /*space*/
+  margin-left: var(--card-mobile-margin);
+  margin-right: var(--card-mobile-margin);
+  padding: var(--card-mobile-padding);
+}
+/*~~~~~~~BIG PICTURE + SCREEN~~~~~~~*/
+.pic {
+  border-radius: var(--big-pic-radius);
+  /*image*/
+  background-image: url("images/image-equilibrium.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  /*size*/
+  height: var(--big-pic-mobile-size);
+  width: var(--big-pic-mobile-size);
+  /*space*/
+  margin: auto;
+}
+.pic:hover .viewScreen {
+  opacity: 1;
+  cursor: pointer;
+}
+.viewScreen {
+  opacity: 0;
+  background-color: hsla(178, 100%, 50%, 0.5);
+  border-radius: var(--big-pic-radius);
+  /*postion*/
+  position: relative;
+  /*size*/
+  height: var(--big-pic-mobile-size);
+  width: var(--big-pic-mobile-size);
+  /*transition*/
+  transition-property: opacity;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in;
+}
+#view {
+  /*image*/
+  background-image: url("images/icon-view.svg");
+  /*postion*/
+  position: absolute;
+  /*position absolute center elements*/
+  left: 50%;
+  margin-left: calc(var(--icon-view-size) / -2);
+  top: 50%;
+  margin-top: calc(var(--icon-view-size) / -2);
+  /*size*/
+  height: var(--icon-view-size);
+  width: var(--icon-view-size);
+}
+/*~~~~~~~~MAIN CONTENT~~~~~~~*/
+.mainTitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.iconPlusText {
+  /*flex*/
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+/*~~~~~~~~ETH + TIME~~~~~~~~*/
+.containerEthTime {
+  /*flex*/
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.icon {
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+  /*space*/
+  margin-right: var(--icon-mobile-margin);
+}
+.eth {
+  color: var(--Cyan);
+  font-weight: 600;
+}
+#clockIcon {
+  background-image: url("images/icon-clock.svg");
+  /*size*/
+  height: var(--icon-clock-size);
+  width: var(--icon-clock-size);
+}
+#ethereumIcon {
+  background-image: url("images/icon-ethereum.svg");
+  /*size*/
+  height: 17px;
+  width: 11px;
+}
+
+.timeLeft,
+#creator {
+  font-weight: 400;
+}
+/*~~~~~~PROFILE DETALIS~~~~~~~*/
+.contianerProfile {
+  border-top: 2px var(--Very-dark-blue-line) solid;
+  /*flex*/
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  /*space*/
+  padding-top: var(--contianerProfile-padding);
+}
+.avatarImg {
+  border: 1px var(--White) solid;
+  border-radius: 50%;
+  /*image*/
+  background-image: url("images/image-avatar.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  /*space*/
+  margin-right: var(--avatar-mobile-margin);
+  /*size*/
+  height: var(--avatar-pic-size);
+  width: var(--avatar-pic-size);
+}
+.creatorName {
+  /*flex*/
+  align-self: center;
+  /*space*/
+  margin: 0;
+}
+
+/*~~~TEXT HOVER EFFECT~~*/
+.textHover {
+  color: var(--White);
+  /*transition*/
+  transition-property: color;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in;
+}
+.textHover:hover {
+  color: var(--Cyan);
+  cursor: pointer;
+}
+/*~~~~~~~~FOOTER ATTRIBUTION~~~~~~~~~*/
+.attribution {
+  /*text*/
+  font-size: 0.8rem;
+  text-align: center;
+  /*space*/
+  margin-top: var(--avatar-mobile-margin);
+}
+
+/*####################################*/
+/*------------DESKTOP-------------*/
+@media only screen and (min-width: 500px) {
+  html {
+    font-size: 16px;
+  }
+  body {
+    align-items: center;
+  }
+
+  .card {
+    margin: 0;
+    width: var(--card-desktop-size);
+    box-sizing: border-box;
+    padding: 24px;
+    box-shadow: 0px 5px 20px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .pic {
+    height: var(--big-pic-desktop-size);
+    width: var(--big-pic-desktop-size);
+  }
+
+  .viewScreen {
+    height: var(--big-pic-desktop-size);
+    width: var(--big-pic-desktop-size);
+  }
+  #view {
+    height: var(--icon-view-size);
+    width: var(--icon-view-size);
+  }
+
+  .icon {
+    margin-right: 5px;
+  }
+
+  .contianerProfile {
+    padding-top: 14px;
+  }
+  .avatarImg {
+    margin-right: 10px;
+  }
+
+  .attribution {
+    margin-top: 15px;
+  }
+}
+
+/*###########################*/
+/*------ MOBILE LANDSCAPE------*/
+@media screen and (max-height: 540px) and (orientation: landscape) {
+  html {
+    font-size: 14px;
+  }
+  .card {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+
+    /*space*/
+    padding: calc(var(--card-mobile-padding) / 2);
+  }
+  .containerContent {
+    align-self: center;
+  }
+  .mainTitle {
+    margin-top: 0;
+  }
+  .pic {
+    margin-right: 24px;
+    /*size*/
+    height: calc(var(--big-pic-mobile-size) / 3);
+    width: calc(var(--big-pic-mobile-size) / 3);
+  }
+  .viewScreen {
+    /*size*/
+    height: calc(var(--big-pic-mobile-size) / 3);
+    width: calc(var(--big-pic-mobile-size) / 3);
+  }
+  .attribution {
+    margin-top: 2.5vh;
+  }
+}
