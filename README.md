@@ -1,6 +1,4 @@
-👋[Preview site](https://maym42.github.io/nft-preview-card-component-main/)
-
-# Frontend Mentor - NFT preview card component
+# Frontend Mentor - NFT preview card component 💻[Preview Site](https://maym42.github.io/nft-preview-card-component-main/)
 
 ![Design preview for the NFT preview card component coding challenge](./design/desktop-preview.jpg)
 
